@@ -1,5 +1,5 @@
 from typing import cast, Callable
-from scrapers import superselectos, walmart, pricesmart, chilax, mimascota
+from scrapers import superselectos, walmart, pricesmart, chilax, insagro
 from utils.get_number_between_options import get_number
 
 
@@ -35,10 +35,10 @@ def scrape_products_prompt() -> None:
             "function": pricesmart.main,
         },
         4: {
-            "key": "mimascota",
-            "base_url": "https://sv.miscota.com/",
-            "page_notation": "?pag=",
-            "function": mimascota.main,
+            "key": "insagro",
+            "base_url": "https://insagro.com.sv/product-category/",
+            "page_notation": "/page/",
+            "function": insagro.main,
         },
         5: {
             "key": "chilax",

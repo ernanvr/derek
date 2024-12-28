@@ -1,5 +1,6 @@
 /.ropeproject
 __pycache__/
-*.pyc
-*.pyo
+**.pyc
+**.pyo
 .env
+**.xlsx

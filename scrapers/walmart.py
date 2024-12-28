@@ -11,14 +11,12 @@ def main(base_url: str, page_notation: str, category: str):
 
     if sheet is not None:
         sheet.append(["Descripción", "Precio"])  # Add headers
+
     # Construct the URL
     url = f"{base_url}{category}"
     headers = {
         "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
     }
-
-    if sheet is not None:
-        sheet.append(["Descripción", "Precio"])  # Add headers
 
     page = 1
     while True:
@@ -50,6 +48,6 @@ def main(base_url: str, page_notation: str, category: str):
 
     # Save the workbook to a file
     current_path = os.getcwd()
-    file_path = os.path.join(current_path, f"products_{category}.xlsx")
+    file_path = os.path.join(current_path, "products_walmart.xlsx")
     workbook.save(file_path)
     print(f"Archivo creado exitosamente: {file_path}")
